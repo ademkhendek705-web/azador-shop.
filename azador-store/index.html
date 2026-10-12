@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZADOR Store | Aspirateur Multifonction 3-en-1 Sans Fil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#111111',
+                            charcoal: '#1A1A1A',
+                            gold: '#D4AF37',
+                            goldHover: '#B59226',
+                            accent: '#F4F4F5',
+                            muted: '#71717A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #E6CA65 0%, #D4AF37 50%, #B38F22 100%);
+        }
+        .gold-gradient:hover {
+            background: linear-gradient(135deg, #F0D575 0%, #E0B943 50%, #C49F30 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+    <div class="bg-brand-dark text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium tracking-wide border-b border-brand-gold/30">
+        <div class="container mx-auto flex justify-center items-center gap-2 flex-wrap">
+            <span class="inline-block w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span>⚡ <strong>Livraison Gratuite</strong> aujourd'hui seulement !</span>
+            <span class="hidden sm:inline text-gray-500">|</span>
+            <span class="text-brand-gold font-semibold">Plus que 5 pièces en stock !</span>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-heading font-bold text-2xl md:text-3xl tracking-widest text-brand-dark flex items-center gap-2">
+                AZADOR<span class="text-brand-gold font-light">STORE</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="#product" class="hover:text-brand-gold transition">Produit</a>
+                <a href="#features" class="hover:text-brand-gold transition">Caractéristiques</a>
+                <a href="#reviews" class="hover:text-brand-gold transition">Avis Clients (128)</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-1.5 text-xs text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full font-medium border border-emerald-200">
+                    <i class="fa-solid fa-shield-halved"></i> Paiement 100% Sécurisé
+                </div>
+                <a href="#checkout" class="gold-gradient text-brand-dark font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping"></i> Commander
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="product" class="py-8 md:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left Side: Product Gallery -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="relative bg-white rounded-2xl p-4 border border-gray-100 shadow-sm overflow-hidden group">
+                    <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full tracking-wider shadow">
+                        -50% RÉDUCTION
+                    </span>
+                    <img id="mainImage" src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=80" 
+                         alt="AZADOR 3-in-1 Cordless Vacuum" 
+                         class="w-full h-[380px] sm:h-[480px] object-cover rounded-xl transition duration-500 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/800x600/1A1A1A/FFFFFF?text=AZADOR+3-in-1+Vacuum'">
+                </div>
+
+                <!-- Gallery Thumbnails -->
+                <div class="grid grid-cols-4 gap-3">
+                    <button onclick="changeImage('https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=80', this)" 
+                            class="thumb-btn border-2 border-brand-gold rounded-xl overflow-hidden bg-white p-1 focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg" alt="Thumbnail 1">
+                    </button>
+                    <button onclick="changeImage('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=80', this)" 
+                            class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-white p-1 focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg" alt="Thumbnail 2">
+                    </button>
+                    <button onclick="changeImage('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80', this)" 
+                            class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-white p-1 focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg" alt="Thumbnail 3">
+                    </button>
+                    <button onclick="changeImage('https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1000&q=80', this)" 
+                            class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-white p-1 focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg" alt="Thumbnail 4">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side: Details & Checkout Form -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="flex text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-700">4.9 / 5</span>
+                        <a href="#reviews" class="text-xs text-brand-muted underline hover:text-brand-dark">(128 Avis Client)</a>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-3xl font-heading font-bold text-brand-dark leading-tight">
+                        Aspirateur Multifonction 3-en-1 Sans Fil High-Power
+                    </h1>
+                    <p class="text-xs text-brand-muted mt-1">Puissance d'aspiration extrême • Portable • Rechargeable USB-C</p>
+                </div>
+
+                <!-- Price & Offer Badge -->
+                <div class="flex items-baseline gap-3 p-4 bg-amber-50/50 rounded-xl border border-amber-200/60">
+                    <span class="text-3xl font-extrabold text-brand-dark" id="totalPrice">$19.99</span>
+                    <span class="text-lg text-gray-400 line-through">$39.99</span>
+                    <span class="ml-auto text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">Économisez $20.00</span>
+                </div>
+
+                <!-- Bullet Features -->
+                <ul class="space-y-2 text-xs sm:text-sm text-gray-600">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-gold"></i> <strong>Aspiration ultra-puissante:</strong> Poussière, poils, voiture & maison</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-gold"></i> <strong>3 Embouts inclus:</strong> Suceur plat, brosse & souffleur</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-gold"></i> <strong>Batterie longue durée:</strong> Autonomie 35+ minutes</li>
+                </ul>
+
+                <!-- Order Checkout Form Area -->
+                <div id="checkout" class="bg-white p-5 sm:p-6 rounded-2xl border-2 border-brand-gold/40 shadow-xl space-y-4">
+                    <h3 class="font-heading font-bold text-base text-brand-dark flex items-center justify-between border-b pb-3">
+                        <span><i class="fa-solid fa-truck-fast text-brand-gold mr-1.5"></i> Expédition & Paiement</span>
+                        <span class="text-xs font-normal text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Stock Disponible</span>
+                    </h3>
+
+                    <!-- Formspree Integration Placeholder Form -->
+                    <form id="orderForm" action="https://formspree.io/f/xbjnqvzy" method="POST" class="space-y-3">
+                        <input type="hidden" name="_subject" value="Nouvelle Commande - AZADOR Store">
+                        <input type="hidden" name="Produit" value="Aspirateur 3-en-1 AZADOR ($19.99)">
+                        <input type="hidden" name="Prix_Total" id="hiddenTotalPrice" value="$19.99">
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Nom Complet *</label>
+                            <input type="text" name="Nom_Client" required placeholder="John Doe" 
+                                   class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Email *</label>
+                                <input type="email" name="Email" required placeholder="votre@email.com" 
+                                       class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Téléphone *</label>
+                                <input type="tel" name="Telephone" required placeholder="+33 6 12 34 56 78" 
+                                       class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Adresse de Livraison *</label>
+                            <input type="text" name="Adresse" required placeholder="12 Rue de la Paix" 
+                                   class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Ville *</label>
+                                <input type="text" name="Ville" required placeholder="Paris" 
+                                       class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Code Postal *</label>
+                                <input type="text" name="Code_Postal" required placeholder="75001" 
+                                       class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-gold focus:outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selector -->
+                        <div class="flex items-center justify-between pt-2 pb-1 border-t">
+                            <span class="text-xs font-semibold text-gray-700">Quantité:</span>
+                            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                                <button type="button" onclick="updateQuantity(-1)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm font-bold">-</button>
+                                <span id="qtyDisplay" class="px-4 text-xs font-bold">1</span>
+                                <button type="button" onclick="updateQuantity(1)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm font-bold">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Submit Buttons -->
+                        <button type="submit" class="w-full gold-gradient text-brand-dark font-bold text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-lock"></i> COMMANDER MAINTENANT - $19.99
+                        </button>
+                    </form>
+
+                    <!-- PayPal Express Button Placeholder -->
+                    <div class="pt-2 text-center">
+                        <p class="text-[10px] text-gray-400 mb-2 uppercase tracking-wider font-semibold">Ou paiement express sécurisé</p>
+                        <button type="button" onclick="document.getElementById('orderForm').requestSubmit()" class="w-full bg-[#FFC439] hover:bg-[#F2BA31] text-[#003087] font-bold text-xs py-3 rounded-xl shadow transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-paypal text-lg"></i> Payer avec <strong>PayPal</strong> / CB
+                        </button>
+                    </div>
+
+                    <div class="pt-4 border-t border-gray-100 space-y-3">
+                        <div class="grid grid-cols-3 gap-2 text-center text-[10px] text-gray-500 font-medium">
+                            <div class="p-2 bg-gray-50 rounded-lg">
+                                <i class="fa-solid fa-shield-virus text-brand-gold text-base mb-1 block"></i>
+                                SSL 256-bit Encrypted
+                            </div>
+                            <div class="p-2 bg-gray-50 rounded-lg">
+                                <i class="fa-solid fa-rotate-left text-brand-gold text-base mb-1 block"></i>
+                                14 Jours Satisfait/Remboursé
+                            </div>
+                            <div class="p-2 bg-gray-50 rounded-lg">
+                                <i class="fa-solid fa-truck-ramp-box text-brand-gold text-base mb-1 block"></i>
+                                Suivi de Colis En Direct
+                            </div>
+                        </div>
+
+                        <!-- Card Logos -->
+                        <div class="flex items-center justify-center gap-4 pt-1 opacity-70 text-gray-600 text-xl">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                            <i class="fa-brands fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold tracking-widest text-brand-gold uppercase mb-2">Ingénierie Moderne</h2>
+                <p class="text-2xl sm:text-3xl font-heading font-bold text-brand-dark">Conçu pour un nettoyage sans effort</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 bg-brand-accent rounded-2xl border border-gray-100 transition hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Aspiration Puissante</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">Moteur haute vitesse générant une pression maximale pour aspirer poussières, miettes et poils d'animaux en un seul passage.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 bg-brand-accent rounded-2xl border border-gray-100 transition hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Ultralégers & Sans Fil</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">Design ergonomique pesant moins de 400g. Manipulez-le facilement dans la voiture, au bureau ou à la maison.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 bg-brand-accent rounded-2xl border border-gray-100 transition hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Polyvalence 3-en-1</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">Livré avec embout suceur pour fentes, brosse douce pour claviers/sièges et fonction souffleur de poussière.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 bg-brand-accent rounded-2xl border border-gray-100 transition hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-battery-full"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Filtre HEPA Lavable</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">Filtre réutilisable et lavable à l'eau capturant 99.9% des micro-particules. Économique et écologique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h2 class="text-xs font-bold tracking-widest text-brand-gold uppercase mb-2">Preuve Sociale</h2>
+                <p class="text-2xl sm:text-3xl font-heading font-bold text-brand-dark">Ce que disent nos clients</p>
+            </div>
+
+            <!-- Score Summary Card -->
+            <div class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm">
+                <div class="text-center">
+                    <span class="text-3xl font-bold font-heading text-brand-dark">4.9</span>
+                    <span class="text-xs text-gray-400 block">/ 5.0</span>
+                </div>
+                <div class="border-l border-gray-200 pl-4">
+                    <div class="flex text-amber-400 text-sm mb-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xs text-gray-600 font-medium">Basé sur 128 avis vérifiés</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-[10px] text-emerald-600 bg-emerald-50 font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-circle-check"></i> Achat Vérifié</span>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">"Incroyablement puissant pour sa taille ! Je l'utilise principalement pour nettoyer les sièges de ma voiture et le clavier du bureau. Livraison reçue en 4 jours."</p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-8 h-8 rounded-full bg-brand-dark text-brand-gold font-bold text-xs flex items-center justify-center">M.L</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-brand-dark">Marc L.</h4>
+                        <span class="text-[10px] text-gray-400">Paris, France</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-[10px] text-emerald-600 bg-emerald-50 font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-circle-check"></i> Achat Vérifié</span>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">"Très bon produit, compact et élégant. La batterie tient très bien le coup. Le service client d'AZADOR a répondu à ma question en quelques minutes sur WhatsApp."</p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-8 h-8 rounded-full bg-brand-dark text-brand-gold font-bold text-xs flex items-center justify-center">S.B</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-brand-dark">Sophie B.</h4>
+                        <span class="text-[10px] text-gray-400">Lyon, France</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-[10px] text-emerald-600 bg-emerald-50 font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-circle-check"></i> Achat Vérifié</span>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">"Reçu rapidement dans un emballage très soigné. Il aspire parfaitement les poils de mon chat sur le canapé. Je recommande à 100% AZADOR !"</p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-8 h-8 rounded-full bg-brand-dark text-brand-gold font-bold text-xs flex items-center justify-center">A.K</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-brand-dark">Adam K.</h4>
+                        <span class="text-[10px] text-gray-400">Bruxelles, Belgique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
+                <!-- Brand Info -->
+                <div class="space-y-3">
+                    <h3 class="font-heading font-bold text-xl tracking-widest">AZADOR<span class="text-brand-gold font-light">STORE</span></h3>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-xs">
+                        Votre boutique de confiance pour des équipements modernes, élégants et performants au quotidien.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-3">Informations Légales</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Politique de Confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white transition">Politique de Retour (14 Jours)</a></li>
+                        <li><a href="#" class="hover:text-white transition">Conditions Générales de Vente (CGV)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Contact -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-3">Contact & Support</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><i class="fa-solid fa-envelope mr-2 text-brand-gold"></i> support@azador-store.com</li>
+                        <li>
+                            <a href="https://wa.me/213000000000" target="_blank" class="hover:text-emerald-400 transition inline-flex items-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i> Assistance Client WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+                <p>&copy; 2026 AZADOR Store. Tous droits réservés.</p>
+                <div class="flex gap-4">
+                    <span>Paiements SSL Sécurisés</span>
+                    <span>•</span>
+                    <span>Expédition Rapide</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery Thumbnail Switcher
+        function changeImage(src, btn) {
+            document.getElementById('mainImage').src = src;
+            document.querySelectorAll('.thumb-btn').forEach(b => {
+                b.classList.remove('border-brand-gold');
+                b.classList.add('border-transparent');
+            });
+            btn.classList.remove('border-transparent');
+            btn.classList.add('border-brand-gold');
+        }
+
+        // Dynamic Quantity & Price Calculator
+        let quantity = 1;
+        const basePrice = 19.99;
+
+        function updateQuantity(change) {
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            if (quantity > 10) quantity = 10;
+
+            const total = (basePrice * quantity).toFixed(2);
+            document.getElementById('qtyDisplay').innerText = quantity;
+            document.getElementById('totalPrice').innerText = `$${total}`;
+            document.getElementById('hiddenTotalPrice').value = `$${total}`;
+        }
+    </script>
+</body>
+</html>
